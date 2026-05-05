@@ -32,7 +32,7 @@
   <!-- MAIN CONTENT (hidden until unlocked) -->
   <div id="content" class="content" hidden>
 
-    <!-- HEADER -->
+    <!-- HEADER + TABS -->
     <header class="site-header">
       <div class="header-inner">
         <div class="header-badge">⚽</div>
@@ -41,104 +41,388 @@
           <p class="header-meta">26.–28.6.2026 &nbsp;·&nbsp; Jyväskylä &amp; Laukaa</p>
         </div>
       </div>
+      <nav class="tabs" role="tablist">
+        <button class="tab-btn active" role="tab" data-tab="info">ℹ️ Info</button>
+        <button class="tab-btn" role="tab" data-tab="roolit">👥 Roolit</button>
+        <button class="tab-btn" role="tab" data-tab="kartta">🗺️ Kartta</button>
+        <button class="tab-btn" role="tab" data-tab="materiaalit">📄 Ohjeet</button>
+      </nav>
     </header>
 
     <main class="main">
 
-      <!-- INFO SECTION: FI + EN side by side -->
-      <section class="section">
-        <h2 class="section-title">Talkooinfo</h2>
-        <div class="bilingual">
+      <!-- ===================== TAB: INFO ===================== -->
+      <div id="tab-info" class="tab-panel active" role="tabpanel">
 
-          <!-- FINNISH -->
-          <div class="lang-block">
-            <div class="lang-flag">🇫🇮</div>
-            <h3 class="lang-title">Mikä on HeinäCup?</h3>
-            <p>HeinäCup on yksi Suomen suurimmista juniorijalkapalloturnaukista. Vuonna 2026 turnauksessa pelaa <strong>340 joukkuetta</strong> eri puolilta Suomea ja ulkomailta. Pelit pelataan <strong>15 kentällä</strong> Jyväskylässä ja Laukaassa viikonloppuna 26.–28.6.2026.</p>
-            <p>Ikäluokat kattavat vuosikertoja 2011–2019, ja sarjat on jaettu tasoihin (Elite, Kilpa, Haaste, Harraste). Turnauksen järjestää <strong>Palokan Riento</strong>.</p>
-
-            <h3 class="lang-title">Miksi vanhempien kannattaa tehdä talkootöitä?</h3>
-            <p>Joukkueemme saa <strong>8 € jokaista talkootuntia kohden</strong> – rahat tulevat suoraan joukkueen kassaan ja kattavat esimerkiksi turnausmaksuja, leirejä ja varustehankintoja.</p>
-            <p>Talkootyö on käytännöllistä: kenttätehtävät ovat selkeitä, vuorot ovat lyhyitä ja pääset samalla seuraamaan turnauksen tunnelmaa läheltä.</p>
-            <p class="note">📋 Ilmoittautuminen vuoroihin tapahtuu erikseen – linkki jaetaan WhatsApp-ryhmässä.</p>
-          </div>
-
-          <!-- ENGLISH -->
-          <div class="lang-block">
-            <div class="lang-flag">🇬🇧</div>
-            <h3 class="lang-title">What is HeinäCup?</h3>
-            <p>HeinäCup is one of Finland's largest youth football tournaments. In 2026, <strong>340 teams</strong> from across Finland and abroad will compete. Matches are played on <strong>15 fields</strong> in Jyväskylä and Laukaa over the weekend of 26–28 June 2026.</p>
-            <p>Age groups range from 2011 to 2019, with divisions by level (Elite, Competitive, Challenge, Recreational). The tournament is organised by <strong>Palokan Riento</strong>.</p>
-
-            <h3 class="lang-title">Why should parents volunteer?</h3>
-            <p>Our team earns <strong>€8 for every hour volunteered</strong> – the money goes directly into the team fund and covers things like tournament fees, training camps, and equipment.</p>
-            <p>Volunteering is straightforward: field tasks are clearly defined, shifts are short, and you get to experience the tournament atmosphere up close.</p>
-            <p class="note">📋 Sign-up for shifts is handled separately – the link will be shared in the WhatsApp group.</p>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- MATERIALS SECTION -->
-      <section class="section">
-        <h2 class="section-title">Materiaalit / Materials</h2>
-        <div class="cards">
-
-          <a class="card card-download" href="joukkueinfo-2026.pdf" target="_blank" rel="noopener">
-            <div class="card-icon">📄</div>
-            <div class="card-body">
-              <div class="card-name">HeinäCup joukkueinfo 2026</div>
-              <div class="card-desc">Joukkueiden ohjeistus turnaukseen &nbsp;·&nbsp; Team guide</div>
-              <div class="card-meta">PDF · 309 KB</div>
-            </div>
-            <div class="card-arrow">↓</div>
-          </a>
-
-          <a class="card card-download" href="talkoo-ohje-2026.pdf" target="_blank" rel="noopener">
-            <div class="card-icon">📋</div>
-            <div class="card-body">
-              <div class="card-name">Talkoo-ohje 2026</div>
-              <div class="card-desc">Talkoolaisten ohjeistus &nbsp;·&nbsp; Volunteer guide</div>
-              <div class="card-meta">PDF · 66 KB</div>
-            </div>
-            <div class="card-arrow">↓</div>
-          </a>
-
-        </div>
-      </section>
-
-      <!-- FIELD MAP SECTION -->
-      <section class="section">
-        <h2 class="section-title">Kenttäkartta – Kuokkala / Field Map</h2>
-        <p class="section-desc">Kuokkalan kenttä · Pohjanlahdentie 7, 40520 Jyväskylä</p>
-        <div class="map-container">
-          <img
-            src="kenttasuunnittelu/image1.png"
-            alt="Kuokkalan kenttäsuunnittelu – kenttäkartta"
-            class="map-img"
-            loading="lazy"
-          />
-        </div>
-        <div class="map-grid">
-          <img src="kenttasuunnittelu/image8.png" alt="Kuokkala ilmakuva" class="map-thumb" loading="lazy" />
-          <img src="kenttasuunnittelu/image3.png" alt="Kenttäalue" class="map-thumb" loading="lazy" />
-        </div>
-      </section>
-
-      <!-- KENTTÄMESTARI APP SECTION -->
-      <section class="section">
-        <h2 class="section-title">Kenttämestari-sovellus</h2>
-        <div class="cards">
-          <div class="card card-app">
-            <div class="card-icon">📱</div>
-            <div class="card-body">
-              <div class="card-name">Kuokkala – Kenttämestari</div>
-              <div class="card-desc">Otteluaikataulu, tuloskirjaus ja kenttätilanne reaaliajassa</div>
-              <div class="card-badge">Tulossa pian / Coming soon</div>
-            </div>
+        <!-- URGENT CALLOUT -->
+        <div class="callout-urgent">
+          <div class="callout-icon">🏪</div>
+          <div>
+            <strong>Kiireellistä: Kioskivastaava tarvitaan heti!</strong>
+            <span>Urgent: We urgently need someone to take the kiosk manager role.</span>
           </div>
         </div>
-      </section>
+
+        <section class="section">
+          <h2 class="section-title">Talkooinfo</h2>
+          <div class="bilingual">
+
+            <!-- FINNISH -->
+            <div class="lang-block">
+              <div class="lang-flag">🇫🇮</div>
+              <h3 class="lang-title">HeinäCup 2026</h3>
+              <p>HeinäCup järjestetään <strong>26.–28.6.2026</strong> Jyväskylässä ja Laukaassa. Joukkueemme osallistuu turnaukseen ja meillä on <strong>kokonaisvastuu Kuokkalan kentästä</strong> – kenttähenkilökunta, kioski, opastus ja kaikki muu.</p>
+
+              <h3 class="lang-title">Jokaisen pelaajan vanhempi osallistuu</h3>
+              <p>Talkootyö ei ole vapaaehtoista – <strong>jokaisen pelaajan vanhemmalta odotetaan osallistumista</strong> vähintään yhteen vuoroon. Yhdessä homma hoituu ja kukaan ei kuormitu liikaa.</p>
+              <p>Joukkueemme saa <strong>8 € jokaista talkootuntia kohden</strong> suoraan joukkueen kassaan – rahat kattavat turnausmaksuja, leirejä ja varusteita.</p>
+              <p class="note">📋 Ilmoittautuminen vuoroihin tapahtuu erikseen – linkki jaetaan WhatsApp-ryhmässä.</p>
+            </div>
+
+            <!-- ENGLISH -->
+            <div class="lang-block">
+              <div class="lang-flag">🇬🇧</div>
+              <h3 class="lang-title">HeinäCup 2026</h3>
+              <p>HeinäCup takes place <strong>26–28 June 2026</strong> in Jyväskylä and Laukaa. Our team is participating and we are <strong>fully responsible for running the Kuokkala field</strong> – staff, kiosk, signage, and everything else.</p>
+
+              <h3 class="lang-title">Every player's parent is expected to help</h3>
+              <p>Volunteering is not optional – <strong>every player's parent is expected to take at least one shift</strong>. Together the workload stays manageable for everyone.</p>
+              <p>Our team earns <strong>€8 for every hour volunteered</strong>, paid directly into the team fund – covering tournament fees, camps, and equipment.</p>
+              <p class="note">📋 Sign-up for shifts is handled separately – the link will be shared in the WhatsApp group.</p>
+            </div>
+
+          </div>
+        </section>
+
+      </div><!-- /tab-info -->
+
+      <!-- ===================== TAB: ROOLIT ===================== -->
+      <div id="tab-roolit" class="tab-panel" role="tabpanel">
+
+        <!-- URGENT CALLOUT -->
+        <div class="callout-urgent">
+          <div class="callout-icon">🏪</div>
+          <div>
+            <strong>Kiireellistä: Kioskivastaava tarvitaan heti!</strong>
+            <span>Urgent: We urgently need someone to take the kiosk manager role.</span>
+          </div>
+        </div>
+
+        <!-- KENTÄN ROOLIT -->
+        <div class="role-group">
+          <p class="role-group-title">Kentän talkooroolit – Kuokkala</p>
+          <div class="accordion">
+
+            <!-- Kenttävastaava -->
+            <div class="acc-item">
+              <button class="acc-header" type="button" aria-expanded="false">
+                <span class="acc-icon">🏟️</span>
+                <span class="acc-title-wrap">
+                  <span class="acc-title">Kenttävastaava</span>
+                  <span class="acc-subtitle">Field Manager</span>
+                </span>
+                <span class="acc-badge acc-badge-key">Avainrooli</span>
+                <span class="acc-chevron">▼</span>
+              </button>
+              <div class="acc-body">
+                <p>Vastaa hänelle nimetyn kentän kokonaisuudesta ja toimii esihenkilönä koko henkilöstölle. On vastuussa kentän toimintojen suunnittelusta yhdessä turnauspäällikön kanssa.</p>
+                <ul>
+                  <li>Kokonaisvastuu Kuokkalan kentän toiminnasta</li>
+                  <li>Toimii esihenkilönä kaikille talkoolaisille kentällä</li>
+                  <li>Suunnittelee kentän toiminnot yhdessä turnauspäällikön (Sami Perälä) kanssa</li>
+                  <li>Roolin voi jakaa kahdelle henkilölle</li>
+                </ul>
+                <p class="en-note"><strong>Field Manager:</strong> Responsible for the overall operation of the assigned field. Acts as supervisor for all field staff. Plans field operations together with the tournament director.</p>
+              </div>
+            </div>
+
+            <!-- Kioskivastaava -->
+            <div class="acc-item">
+              <button class="acc-header" type="button" aria-expanded="false">
+                <span class="acc-icon">🏪</span>
+                <span class="acc-title-wrap">
+                  <span class="acc-title">Kioskivastaava</span>
+                  <span class="acc-subtitle">Kiosk Manager</span>
+                </span>
+                <span class="acc-badge acc-badge-urgent">Tarvitaan heti!</span>
+                <span class="acc-chevron">▼</span>
+              </button>
+              <div class="acc-body">
+                <p>Vastaa hänelle nimetyn kentän kioskin kokonaisuudesta ja toimii esihenkilönä kioskitiimille. Hoitaa kioskitäydennykset ja yhteydenpidon kioskipäällikön kanssa.</p>
+                <ul>
+                  <li>Kokonaisvastuu kioskin toiminnasta</li>
+                  <li>Toimii esihenkilönä kioskihenkilöille</li>
+                  <li>Hoitaa tuotetäydennykset</li>
+                  <li>Yhteydenpito kioskipäällikön (Sami Paavilainen) kanssa</li>
+                  <li>Roolin voi jakaa kahdelle henkilölle</li>
+                </ul>
+                <p class="en-note"><strong>Kiosk Manager:</strong> Responsible for the overall operation of the kiosk. Supervises the kiosk team, manages restocking, and liaises with the kiosk director.</p>
+              </div>
+            </div>
+
+            <!-- Kenttähenkilö -->
+            <div class="acc-item">
+              <button class="acc-header" type="button" aria-expanded="false">
+                <span class="acc-icon">⚽</span>
+                <span class="acc-title-wrap">
+                  <span class="acc-title">Kenttähenkilö</span>
+                  <span class="acc-subtitle">Field Staff</span>
+                </span>
+                <span class="acc-chevron">▼</span>
+              </button>
+              <div class="acc-body">
+                <p>Vastaa hänelle nimetyn pelikentän/-kenttien pelikunnosta ja toiminnasta.</p>
+                <ul>
+                  <li>Vastaa pelipallojen sijoittelusta ja kunnosta</li>
+                  <li>Ohjeistaa ja opastaa joukkueita ja katsojia</li>
+                  <li>Puuttuu mahdolliseen häiriökäyttäytymiseen tai ilmoittaa siitä eteenpäin</li>
+                </ul>
+                <p class="en-note"><strong>Field Staff:</strong> Responsible for the playing condition of assigned field(s). Manages match balls, guides teams and spectators, and handles any disturbances.</p>
+              </div>
+            </div>
+
+            <!-- Kioskihenkilö -->
+            <div class="acc-item">
+              <button class="acc-header" type="button" aria-expanded="false">
+                <span class="acc-icon">🥤</span>
+                <span class="acc-title-wrap">
+                  <span class="acc-title">Kioskihenkilö</span>
+                  <span class="acc-subtitle">Kiosk Staff</span>
+                </span>
+                <span class="acc-chevron">▼</span>
+              </button>
+              <div class="acc-body">
+                <p>Vastaa tuotteiden esillepanosta ja myynnistä.</p>
+                <ul>
+                  <li>Tuotteiden esillepano ja myynti</li>
+                  <li>Seuraa tuotesaldoja yhdessä kioskivastaavan kanssa</li>
+                  <li>Vastaa koutsikahvilan täydennyksistä</li>
+                </ul>
+                <p class="en-note"><strong>Kiosk Staff:</strong> Handles product display and sales. Monitors stock levels together with the kiosk manager. Restocks the coaches' coffee area.</p>
+              </div>
+            </div>
+
+            <!-- Kuuluttaja-tulosvastaava -->
+            <div class="acc-item">
+              <button class="acc-header" type="button" aria-expanded="false">
+                <span class="acc-icon">🎙️</span>
+                <span class="acc-title-wrap">
+                  <span class="acc-title">Kuuluttaja-tulosvastaava</span>
+                  <span class="acc-subtitle">Announcer &amp; Results</span>
+                </span>
+                <span class="acc-chevron">▼</span>
+              </button>
+              <div class="acc-body">
+                <p>Vastaa kuulutuksista ja musiikin soittamisesta. Vastaa tuomareilta saamiensa pelitulosten syöttämisestä gameresults-järjestelmään (erillinen ohje).</p>
+                <ul>
+                  <li>Kuulutukset kentällä</li>
+                  <li>Musiikin soittaminen</li>
+                  <li>Pelitulosten kirjaus gameresults-järjestelmään tuomareilta saatujen tietojen perusteella</li>
+                </ul>
+                <p class="en-note"><strong>Announcer &amp; Results:</strong> Handles field announcements and music. Enters match results into the gameresults system based on information received from referees.</p>
+              </div>
+            </div>
+
+            <!-- Pysäköinninvalvoja -->
+            <div class="acc-item">
+              <button class="acc-header" type="button" aria-expanded="false">
+                <span class="acc-icon">🚗</span>
+                <span class="acc-title-wrap">
+                  <span class="acc-title">Pysäköinninvalvoja</span>
+                  <span class="acc-subtitle">Parking Guide</span>
+                </span>
+                <span class="acc-chevron">▼</span>
+              </button>
+              <div class="acc-body">
+                <p>Ohjaa henkilöautot ja linja-autot merkityille parkkipaikoille. On aktiivisesti toivottamassa kentälle tulijoita tervetulleeksi – ensimmäinen kontakti kentällä.</p>
+                <ul>
+                  <li>Ohjaa autot ja bussit parkkipaikoille</li>
+                  <li>Toivottaa tulijat tervetulleeksi – ensivaikutelma kentästä</li>
+                </ul>
+                <p class="en-note"><strong>Parking Guide:</strong> Directs cars and buses to designated parking areas. Actively welcomes arrivals – the first point of contact at the field.</p>
+              </div>
+            </div>
+
+            <!-- Yleishenkilö -->
+            <div class="acc-item">
+              <button class="acc-header" type="button" aria-expanded="false">
+                <span class="acc-icon">🙋</span>
+                <span class="acc-title-wrap">
+                  <span class="acc-title">Yleishenkilö</span>
+                  <span class="acc-subtitle">General Helper</span>
+                </span>
+                <span class="acc-chevron">▼</span>
+              </button>
+              <div class="acc-body">
+                <p>Auttaa siellä missä tarvitaan. Ensimmäinen varahenkilö, jos talkoolaisia jää pois tai jossakin on vajausta.</p>
+                <ul>
+                  <li>Päivän alussa: pysäköinnissä ja kenttien valmistelussa</li>
+                  <li>Päivän aikana: kioskin kiireapulaisena</li>
+                  <li>Päivän päätteeksi: purkamassa toimintoja</li>
+                  <li>Paikkaa tarvittaessa muita rooleja</li>
+                </ul>
+                <p class="en-note"><strong>General Helper:</strong> Helps wherever needed. First substitute if other volunteers are absent. Assists with setup, kiosk rush hours, and end-of-day teardown.</p>
+              </div>
+            </div>
+
+          </div><!-- /accordion kentän roolit -->
+        </div><!-- /role-group -->
+
+        <!-- KOULUN ROOLIT -->
+        <div class="role-group">
+          <p class="role-group-title">Koulun talkooroolit – Majoitus &amp; ruokailu</p>
+          <div class="accordion">
+
+            <!-- Kulunvalvonta + keittiö -->
+            <div class="acc-item">
+              <button class="acc-header" type="button" aria-expanded="false">
+                <span class="acc-icon">🚪</span>
+                <span class="acc-title-wrap">
+                  <span class="acc-title">Kulunvalvonta, keittiö</span>
+                  <span class="acc-subtitle">Access Control &amp; Kitchen</span>
+                </span>
+                <span class="acc-chevron">▼</span>
+              </button>
+              <div class="acc-body">
+                <p>Vastaa ruokailijoiden kulunvalvonnasta ja auttaa keittiöhenkilökuntaa esivalmisteluissa, loppusiivouksessa sekä mahdollisissa muissa tehtävissä.</p>
+                <p class="en-note"><strong>Access Control &amp; Kitchen:</strong> Manages access control for diners and assists kitchen staff with preparations, final cleaning, and other tasks as needed.</p>
+              </div>
+            </div>
+
+            <!-- Keittiöhenkilö -->
+            <div class="acc-item">
+              <button class="acc-header" type="button" aria-expanded="false">
+                <span class="acc-icon">🍽️</span>
+                <span class="acc-title-wrap">
+                  <span class="acc-title">Keittiöhenkilö</span>
+                  <span class="acc-subtitle">Kitchen Staff</span>
+                </span>
+                <span class="acc-chevron">▼</span>
+              </button>
+              <div class="acc-body">
+                <p>Tiskikoneen käyttö, astioiden ja ruokien täydennys ruokasaliin, pöytien pyyhkiminen sekä yleisestä siisteydestä ja ruokailun sujuvuudesta huolehtiminen. Esivalmistelu ja loppusiivous.</p>
+                <ul>
+                  <li>Tiskikoneen käyttö</li>
+                  <li>Astioiden ja ruokien täydennys ruokasaliin</li>
+                  <li>Pöytien pyyhkiminen, yleinen siisteys</li>
+                  <li>Esivalmistelu ja loppusiivous</li>
+                </ul>
+                <p class="en-note"><strong>Kitchen Staff:</strong> Operates the dishwasher, restocks dishes and food in the dining hall, wipes tables, and maintains general cleanliness. Handles setup and final cleaning.</p>
+              </div>
+            </div>
+
+            <!-- Kulunvalvonta -->
+            <div class="acc-item">
+              <button class="acc-header" type="button" aria-expanded="false">
+                <span class="acc-icon">🔑</span>
+                <span class="acc-title-wrap">
+                  <span class="acc-title">Kulunvalvonta</span>
+                  <span class="acc-subtitle">Access Control</span>
+                </span>
+                <span class="acc-chevron">▼</span>
+              </button>
+              <div class="acc-body">
+                <p>Majoittuvien joukkueiden vastaanottoon ja lähtöön liittyvät toimenpiteet, yleinen neuvonta, ovien avaaminen. Paikkojen siisteydestä huolehtiminen.</p>
+                <ul>
+                  <li>Joukkueiden vastaanotto ja lähtö</li>
+                  <li>Yleinen neuvonta ja ovien avaaminen</li>
+                  <li>WC-tilojen ja suihkujen siisteys</li>
+                  <li>Hiljaisina aikoina muut tehtävät tarpeen mukaan</li>
+                </ul>
+                <p class="en-note"><strong>Access Control:</strong> Handles check-in and check-out of accommodated teams, general guidance, and door access. Maintains cleanliness of toilets and showers.</p>
+              </div>
+            </div>
+
+            <!-- Yövalvonta -->
+            <div class="acc-item">
+              <button class="acc-header" type="button" aria-expanded="false">
+                <span class="acc-icon">🌙</span>
+                <span class="acc-title-wrap">
+                  <span class="acc-title">Yövalvonta</span>
+                  <span class="acc-subtitle">Night Watch</span>
+                </span>
+                <span class="acc-chevron">▼</span>
+              </button>
+              <div class="acc-body">
+                <p>Yleisen järjestyksen ja turvallisuuden valvonta yöaikaan majoituskoulussa.</p>
+                <p class="en-note"><strong>Night Watch:</strong> Monitors general order and safety during the night at the accommodation school.</p>
+              </div>
+            </div>
+
+          </div><!-- /accordion koulun roolit -->
+        </div><!-- /role-group -->
+
+        <p class="section-desc" style="margin-top:0.5rem;">* Lopullinen kenttäkokoonpano määrittyy joukkuemäärän mukaan. Rooleja ja vuoroja muokataan vielä myöhemmin.</p>
+
+      </div><!-- /tab-roolit -->
+
+      <!-- ===================== TAB: KARTTA ===================== -->
+      <div id="tab-kartta" class="tab-panel" role="tabpanel">
+        <section class="section">
+          <h2 class="section-title">Kenttäkartta – Kuokkala / Field Map</h2>
+          <p class="section-desc">Kuokkalan kenttä · Pohjanlahdentie 7, 40520 Jyväskylä</p>
+
+          <p class="map-label">Kenttäsuunnitelma / Field plan</p>
+          <div class="map-container">
+            <img
+              src="kenttasuunnittelu/image1.png"
+              alt="Kuokkalan kenttäsuunnittelu – kenttäkartta"
+              class="map-img"
+              loading="lazy"
+            />
+          </div>
+
+          <p class="map-label">Ilmakuva alueesta / Aerial view</p>
+          <div class="map-container">
+            <img
+              src="kenttasuunnittelu/image8.png"
+              alt="Kuokkala ilmakuva"
+              class="map-img"
+              loading="lazy"
+            />
+          </div>
+
+          <p class="map-label">Kenttäalue ja rakenteet / Field area</p>
+          <div class="map-grid">
+            <div class="map-container map-container-half">
+              <img src="kenttasuunnittelu/image3.png" alt="Kenttäalue" class="map-img" loading="lazy" />
+            </div>
+            <div class="map-container map-container-half">
+              <img src="kenttasuunnittelu/image4.jpg" alt="Kenttärakenteet" class="map-img" loading="lazy" />
+            </div>
+          </div>
+        </section>
+      </div><!-- /tab-kartta -->
+
+      <!-- ===================== TAB: MATERIAALIT ===================== -->
+      <div id="tab-materiaalit" class="tab-panel" role="tabpanel">
+        <section class="section">
+          <h2 class="section-title">Materiaalit / Materials</h2>
+          <div class="cards">
+
+            <a class="card card-download" href="joukkueinfo-2026.pdf" target="_blank" rel="noopener">
+              <div class="card-icon">📄</div>
+              <div class="card-body">
+                <div class="card-name">HeinäCup joukkueinfo 2026</div>
+                <div class="card-desc">Joukkueiden ohjeistus turnaukseen &nbsp;·&nbsp; Team guide</div>
+                <div class="card-meta">PDF · 309 KB</div>
+              </div>
+              <div class="card-arrow">↓</div>
+            </a>
+
+            <a class="card card-download" href="talkoo-ohje-2026.pdf" target="_blank" rel="noopener">
+              <div class="card-icon">📋</div>
+              <div class="card-body">
+                <div class="card-name">Talkoo-ohje 2026</div>
+                <div class="card-desc">Talkoolaisten ohjeistus &nbsp;·&nbsp; Volunteer guide</div>
+                <div class="card-meta">PDF · 66 KB</div>
+              </div>
+              <div class="card-arrow">↓</div>
+            </a>
+
+          </div>
+        </section>
+      </div><!-- /tab-materiaalit -->
 
     </main>
 
@@ -149,10 +433,10 @@
   </div><!-- /content -->
 
   <script>
+    // ── Password gate ──────────────────────────────────────────
     (function () {
       var PASS = 'PariP2017';
       var KEY  = 'hc2026_unlocked';
-
       var gate    = document.getElementById('gate');
       var content = document.getElementById('content');
       var form    = document.getElementById('gate-form');
@@ -165,10 +449,7 @@
         content.hidden = false;
       }
 
-      // Already unlocked this session?
-      if (sessionStorage.getItem(KEY) === '1') {
-        unlock();
-      }
+      if (sessionStorage.getItem(KEY) === '1') { unlock(); }
 
       form.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -181,6 +462,54 @@
           input.classList.add('shake');
           setTimeout(function () { input.classList.remove('shake'); }, 500);
         }
+      });
+    })();
+
+    // ── Tabs ───────────────────────────────────────────────────
+    (function () {
+      var tabBtns   = document.querySelectorAll('.tab-btn');
+      var tabPanels = document.querySelectorAll('.tab-panel');
+
+      tabBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var target = btn.getAttribute('data-tab');
+
+          tabBtns.forEach(function (b) {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          tabPanels.forEach(function (p) { p.classList.remove('active'); });
+
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          document.getElementById('tab-' + target).classList.add('active');
+
+          // Scroll to top of main on tab switch (mobile UX)
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      });
+    })();
+
+    // ── Accordion ─────────────────────────────────────────────
+    (function () {
+      document.querySelectorAll('.acc-header').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var item = btn.closest('.acc-item');
+          var isOpen = item.classList.contains('open');
+
+          // Close all in same accordion group
+          var group = item.closest('.accordion');
+          group.querySelectorAll('.acc-item').forEach(function (i) {
+            i.classList.remove('open');
+            i.querySelector('.acc-header').setAttribute('aria-expanded', 'false');
+          });
+
+          // Toggle clicked item
+          if (!isOpen) {
+            item.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
       });
     })();
   </script>
