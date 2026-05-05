@@ -207,9 +207,41 @@ body {
   font-size: 0.9rem;
   line-height: 1.5;
 }
-
 .callout-urgent strong { color: var(--red); }
 .callout-urgent span   { color: var(--text-muted); font-size: 0.82rem; display: block; margin-top: 0.15rem; }
+
+/* ============================================================
+   LINK CALLOUT (sheets / form)
+   ============================================================ */
+.callout-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: var(--green-light);
+  border: 1.5px solid var(--green);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.callout-link strong { color: var(--green-dark); display: block; margin-bottom: 0.15rem; }
+.callout-link span   { color: var(--text-muted); font-size: 0.82rem; display: block; margin-bottom: 0.5rem; }
+
+.cta-link {
+  display: inline-block;
+  background: var(--green);
+  color: var(--white) !important;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.1s;
+}
+.cta-link:hover  { background: var(--green-dark); }
+.cta-link:active { transform: scale(0.97); }
+
 .callout-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 0.05rem; }
 
 /* ============================================================
@@ -397,6 +429,10 @@ body {
   background: var(--accent);
   color: var(--white);
 }
+.acc-badge-need {
+  background: var(--green);
+  color: var(--white);
+}
 
 .acc-chevron {
   font-size: 0.75rem;
@@ -480,3 +516,10 @@ body {
   color: var(--text-muted);
   border-top: 1px solid var(--border);
 }
+
+.footer-link {
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 600;
+}
+.footer-link:hover { text-decoration: underline; }
