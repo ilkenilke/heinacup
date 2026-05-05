@@ -380,6 +380,12 @@ body {
 
 .acc-item.open { border-color: var(--green); }
 
+.acc-item-urgent {
+  border-color: var(--red) !important;
+  background: var(--red-light);
+}
+.acc-item-urgent .acc-title { color: var(--red); }
+
 .acc-header {
   width: 100%;
   display: flex;
