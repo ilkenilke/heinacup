@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HeinäCup 2026 – Talkooinfo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PASSWORD GATE -->
+  <div id="gate" class="gate-overlay">
+    <div class="gate-box">
+      <div class="gate-logo">⚽</div>
+      <h1 class="gate-title">HeinäCup 2026</h1>
+      <p class="gate-subtitle">Talkooinfo · Volunteer Info</p>
+      <form id="gate-form" autocomplete="off">
+        <input
+          type="password"
+          id="gate-input"
+          class="gate-input"
+          placeholder="Salasana / Password"
+          autocomplete="current-password"
+          autofocus
+        />
+        <button type="submit" class="gate-btn">Avaa / Enter</button>
+        <p id="gate-error" class="gate-error" hidden>Väärä salasana. / Wrong password.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT (hidden until unlocked) -->
+  <div id="content" class="content" hidden>
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="header-badge">⚽</div>
+        <div>
+          <h1 class="header-title">HeinäCup 2026</h1>
+          <p class="header-meta">26.–28.6.2026 &nbsp;·&nbsp; Jyväskylä &amp; Laukaa</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <!-- INFO SECTION: FI + EN side by side -->
+      <section class="section">
+        <h2 class="section-title">Talkooinfo</h2>
+        <div class="bilingual">
+
+          <!-- FINNISH -->
+          <div class="lang-block">
+            <div class="lang-flag">🇫🇮</div>
+            <h3 class="lang-title">Mikä on HeinäCup?</h3>
+            <p>HeinäCup on yksi Suomen suurimmista juniorijalkapalloturnaukista. Vuonna 2026 turnauksessa pelaa <strong>340 joukkuetta</strong> eri puolilta Suomea ja ulkomailta. Pelit pelataan <strong>15 kentällä</strong> Jyväskylässä ja Laukaassa viikonloppuna 26.–28.6.2026.</p>
+            <p>Ikäluokat kattavat vuosikertoja 2011–2019, ja sarjat on jaettu tasoihin (Elite, Kilpa, Haaste, Harraste). Turnauksen järjestää <strong>Palokan Riento</strong>.</p>
+
+            <h3 class="lang-title">Miksi vanhempien kannattaa tehdä talkootöitä?</h3>
+            <p>Joukkueemme saa <strong>8 € jokaista talkootuntia kohden</strong> – rahat tulevat suoraan joukkueen kassaan ja kattavat esimerkiksi turnausmaksuja, leirejä ja varustehankintoja.</p>
+            <p>Talkootyö on käytännöllistä: kenttätehtävät ovat selkeitä, vuorot ovat lyhyitä ja pääset samalla seuraamaan turnauksen tunnelmaa läheltä.</p>
+            <p class="note">📋 Ilmoittautuminen vuoroihin tapahtuu erikseen – linkki jaetaan WhatsApp-ryhmässä.</p>
+          </div>
+
+          <!-- ENGLISH -->
+          <div class="lang-block">
+            <div class="lang-flag">🇬🇧</div>
+            <h3 class="lang-title">What is HeinäCup?</h3>
+            <p>HeinäCup is one of Finland's largest youth football tournaments. In 2026, <strong>340 teams</strong> from across Finland and abroad will compete. Matches are played on <strong>15 fields</strong> in Jyväskylä and Laukaa over the weekend of 26–28 June 2026.</p>
+            <p>Age groups range from 2011 to 2019, with divisions by level (Elite, Competitive, Challenge, Recreational). The tournament is organised by <strong>Palokan Riento</strong>.</p>
+
+            <h3 class="lang-title">Why should parents volunteer?</h3>
+            <p>Our team earns <strong>€8 for every hour volunteered</strong> – the money goes directly into the team fund and covers things like tournament fees, training camps, and equipment.</p>
+            <p>Volunteering is straightforward: field tasks are clearly defined, shifts are short, and you get to experience the tournament atmosphere up close.</p>
+            <p class="note">📋 Sign-up for shifts is handled separately – the link will be shared in the WhatsApp group.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- MATERIALS SECTION -->
+      <section class="section">
+        <h2 class="section-title">Materiaalit / Materials</h2>
+        <div class="cards">
+
+          <a class="card card-download" href="joukkueinfo-2026.pdf" target="_blank" rel="noopener">
+            <div class="card-icon">📄</div>
+            <div class="card-body">
+              <div class="card-name">HeinäCup joukkueinfo 2026</div>
+              <div class="card-desc">Joukkueiden ohjeistus turnaukseen &nbsp;·&nbsp; Team guide</div>
+              <div class="card-meta">PDF · 309 KB</div>
+            </div>
+            <div class="card-arrow">↓</div>
+          </a>
+
+          <a class="card card-download" href="talkoo-ohje-2026.pdf" target="_blank" rel="noopener">
+            <div class="card-icon">📋</div>
+            <div class="card-body">
+              <div class="card-name">Talkoo-ohje 2026</div>
+              <div class="card-desc">Talkoolaisten ohjeistus &nbsp;·&nbsp; Volunteer guide</div>
+              <div class="card-meta">PDF · 66 KB</div>
+            </div>
+            <div class="card-arrow">↓</div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- FIELD MAP SECTION -->
+      <section class="section">
+        <h2 class="section-title">Kenttäkartta – Kuokkala / Field Map</h2>
+        <p class="section-desc">Kuokkalan kenttä · Pohjanlahdentie 7, 40520 Jyväskylä</p>
+        <div class="map-container">
+          <img
+            src="kenttasuunnittelu/image1.png"
+            alt="Kuokkalan kenttäsuunnittelu – kenttäkartta"
+            class="map-img"
+            loading="lazy"
+          />
+        </div>
+        <div class="map-grid">
+          <img src="kenttasuunnittelu/image8.png" alt="Kuokkala ilmakuva" class="map-thumb" loading="lazy" />
+          <img src="kenttasuunnittelu/image3.png" alt="Kenttäalue" class="map-thumb" loading="lazy" />
+        </div>
+      </section>
+
+      <!-- KENTTÄMESTARI APP SECTION -->
+      <section class="section">
+        <h2 class="section-title">Kenttämestari-sovellus</h2>
+        <div class="cards">
+          <div class="card card-app">
+            <div class="card-icon">📱</div>
+            <div class="card-body">
+              <div class="card-name">Kuokkala – Kenttämestari</div>
+              <div class="card-desc">Otteluaikataulu, tuloskirjaus ja kenttätilanne reaaliajassa</div>
+              <div class="card-badge">Tulossa pian / Coming soon</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>HeinäCup 2026 &nbsp;·&nbsp; Palokan Riento &nbsp;·&nbsp; Jyväskylä</p>
+    </footer>
+
+  </div><!-- /content -->
+
+  <script>
+    (function () {
+      var PASS = 'PariP2017';
+      var KEY  = 'hc2026_unlocked';
+
+      var gate    = document.getElementById('gate');
+      var content = document.getElementById('content');
+      var form    = document.getElementById('gate-form');
+      var input   = document.getElementById('gate-input');
+      var errMsg  = document.getElementById('gate-error');
+
+      function unlock() {
+        sessionStorage.setItem(KEY, '1');
+        gate.style.display = 'none';
+        content.hidden = false;
+      }
+
+      // Already unlocked this session?
+      if (sessionStorage.getItem(KEY) === '1') {
+        unlock();
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (input.value === PASS) {
+          unlock();
+        } else {
+          errMsg.hidden = false;
+          input.value = '';
+          input.focus();
+          input.classList.add('shake');
+          setTimeout(function () { input.classList.remove('shake'); }, 500);
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
