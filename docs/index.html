@@ -8,29 +8,8 @@
 </head>
 <body>
 
-  <!-- PASSWORD GATE -->
-  <div id="gate" class="gate-overlay">
-    <div class="gate-box">
-      <div class="gate-logo">⚽</div>
-      <h1 class="gate-title">HeinäCup 2026</h1>
-      <p class="gate-subtitle">Talkooinfo · Volunteer Info</p>
-      <form id="gate-form" autocomplete="off">
-        <input
-          type="password"
-          id="gate-input"
-          class="gate-input"
-          placeholder="Salasana / Password"
-          autocomplete="current-password"
-          autofocus
-        />
-        <button type="submit" class="gate-btn">Avaa / Enter</button>
-        <p id="gate-error" class="gate-error" hidden>Väärä salasana. / Wrong password.</p>
-      </form>
-    </div>
-  </div>
-
-  <!-- MAIN CONTENT (hidden until unlocked) -->
-  <div id="content" class="content" hidden>
+  <!-- MAIN CONTENT -->
+  <div id="content" class="content">
 
     <!-- HEADER + TABS -->
     <header class="site-header">
@@ -53,18 +32,6 @@
 
       <!-- ===================== TAB: INFO ===================== -->
       <div id="tab-info" class="tab-panel active" role="tabpanel">
-
-        <!-- PARTICIPATION FORM LINK -->
-        <div class="callout-link">
-          <div class="callout-icon">📝</div>
-          <div>
-            <strong>HeinäCup P2017 osallistumiskysely</strong>
-            <span>Pyydämme jokaista pelaajaa kohden yhden vastauksen – täytä lomake ennen turnauksen alkua.</span>
-            <a class="cta-link" href="https://docs.google.com/forms/d/e/1FAIpQLSc2b5CCSt3gVPxl3ubdElTtetjARBzWa7wIHwQCqSjK2fPUsw/viewform?usp=header" target="_blank" rel="noopener">
-              Avaa osallistumiskysely ↗
-            </a>
-          </div>
-        </div>
 
         <section class="section">
           <h2 class="section-title">Talkooinfo</h2>
@@ -101,18 +68,6 @@
 
       <!-- ===================== TAB: ROOLIT ===================== -->
       <div id="tab-roolit" class="tab-panel" role="tabpanel">
-
-        <!-- SHEETS SIGNUP LINK -->
-        <div class="callout-link">
-          <div class="callout-icon">📋</div>
-          <div>
-            <strong>Ilmoittaudu talkootöihin</strong>
-            <span>Merkitse vuorosi Google Sheetiin – avautuu uuteen välilehteen.</span>
-            <a class="cta-link" href="https://docs.google.com/spreadsheets/d/1DitqPMEAjFQP5qKhsUcp5hyvNS7GbpoMrtuD1b6FUYU/edit?gid=1147913596#gid=1147913596" target="_blank" rel="noopener">
-              Avaa talkoolista Google Sheetsistä ↗
-            </a>
-          </div>
-        </div>
 
         <!-- ROOLIT -->
         <div class="role-group">
@@ -366,38 +321,6 @@
   </div><!-- /content -->
 
   <script>
-    // ── Password gate ──────────────────────────────────────────
-    (function () {
-      var PASS = 'PariP2017';
-      var KEY  = 'hc2026_unlocked';
-      var gate    = document.getElementById('gate');
-      var content = document.getElementById('content');
-      var form    = document.getElementById('gate-form');
-      var input   = document.getElementById('gate-input');
-      var errMsg  = document.getElementById('gate-error');
-
-      function unlock() {
-        sessionStorage.setItem(KEY, '1');
-        gate.style.display = 'none';
-        content.hidden = false;
-      }
-
-      if (sessionStorage.getItem(KEY) === '1') { unlock(); }
-
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        if (input.value === PASS) {
-          unlock();
-        } else {
-          errMsg.hidden = false;
-          input.value = '';
-          input.focus();
-          input.classList.add('shake');
-          setTimeout(function () { input.classList.remove('shake'); }, 500);
-        }
-      });
-    })();
-
     // ── Tabs ───────────────────────────────────────────────────
     (function () {
       var tabBtns   = document.querySelectorAll('.tab-btn');
